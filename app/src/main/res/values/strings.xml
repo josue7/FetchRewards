@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FetchRewards</string>
+    <string name="text_tId">ListID</string>
 </resources>
