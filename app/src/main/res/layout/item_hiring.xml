@@ -27,7 +27,8 @@
                 android:layout_height="wrap_content"
                 android:text="2"
                 android:textSize="14sp"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -36,7 +37,8 @@
                 android:textSize="16sp"
                 android:layout_marginStart="@dimen/dimen_separate_text_listid"
                 android:layout_marginEnd="@dimen/dimen_separate_text_listid"
-                android:layout_marginBottom="@dimen/dimen_separate_text_listid"/>
+                android:layout_marginBottom="@dimen/dimen_separate_text_listid"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 
