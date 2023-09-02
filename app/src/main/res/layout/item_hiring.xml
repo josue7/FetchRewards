@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:paddingBottom="8dp"
+    android:layout_margin="@dimen/dimen_separate_default"
+    android:paddingBottom="@dimen/dimen_separate_default"
     app:cardCornerRadius="12dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +15,7 @@
             android:id="@+id/ll_show_listid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/dimen_separate_default"
             android:background="@drawable/background_text_listid"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
                 android:layout_marginBottom="@dimen/dimen_separate_text_listid"
                 android:text="@string/text_tId"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="8dp"
+            android:paddingTop="@dimen/dimen_separate_default"
             app:layout_constraintStart_toEndOf="@+id/ll_show_listid"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -60,7 +60,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="@dimen/dimen_separate_default"
                 android:text="203" />
         </LinearLayout>
 
@@ -69,9 +69,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="8dp"
+            android:paddingTop="@dimen/dimen_separate_default"
+            android:layout_marginEnd="@dimen/dimen_separate_default"
             app:layout_constraintStart_toEndOf="@+id/ll_show_listid"
-            app:layout_constraintTop_toBottomOf="@id/ll_id">
+            app:layout_constraintTop_toBottomOf="@id/ll_id"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -82,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="@dimen/dimen_separate_default"
                 android:text="Item 102" />
         </LinearLayout>
 
