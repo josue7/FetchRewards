@@ -27,9 +27,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                tools:text="2"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="16sp"
+                tools:text="2"
+                android:fontFamily="@font/roboto"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +40,9 @@
                 android:layout_marginBottom="@dimen/dimen_separate_text_listid"
                 android:text="@string/text_tId"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
@@ -56,15 +59,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="ID"
+                android:text="@string/text_id_list"
                 android:textColor="@color/secondary"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_separate_default"
-                tools:text="203" />
+                tools:text="203"
+                android:fontFamily="@font/roboto"
+                android:textSize="14sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -82,15 +89,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Name"
+                android:text="@string/text_name_list"
                 android:textColor="@color/secondary"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_separate_default"
-                tools:text="Item 102" />
+                tools:text="Item 102"
+                android:fontFamily="@font/roboto"
+                android:textSize="14sp"/>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
