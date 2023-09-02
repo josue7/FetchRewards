@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="@dimen/dimen_text"
                 tools:text="2"
                 android:fontFamily="@font/roboto"/>
 
@@ -40,7 +40,7 @@
                 android:layout_marginBottom="@dimen/dimen_separate_text_listid"
                 android:text="@string/text_tId"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="@dimen/dimen_text"
                 android:fontFamily="@font/roboto"
                 android:textStyle="bold"/>
 
@@ -63,7 +63,7 @@
                 android:textColor="@color/secondary"
                 android:textStyle="bold"
                 android:fontFamily="@font/roboto"
-                android:textSize="16sp"/>
+                android:textSize="@dimen/dimen_text"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
                 android:textColor="@color/secondary"
                 android:textStyle="bold"
                 android:fontFamily="@font/roboto"
-                android:textSize="16sp"/>
+                android:textSize="@dimen/dimen_text"/>
 
             <TextView
                 android:layout_width="wrap_content"
