@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="@dimen/dimen_separate_default"
     android:paddingBottom="@dimen/dimen_separate_default"
     app:cardCornerRadius="12dp">
@@ -26,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="2"
+                tools:text="2"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
 
@@ -55,13 +56,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="ID" />
+                android:text="ID"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_separate_default"
-                android:text="203" />
+                tools:text="203" />
         </LinearLayout>
 
         <LinearLayout
@@ -79,13 +82,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Name" />
+                android:text="Name"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_separate_default"
-                android:text="Item 102" />
+                tools:text="Item 102" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
