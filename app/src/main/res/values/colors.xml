@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- app -->
+    <color name="primary">#c724c2</color>
+    <color name="secondary">#ff9900</color>
 </resources>
