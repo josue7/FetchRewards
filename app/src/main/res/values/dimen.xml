@@ -4,6 +4,9 @@
     <dimen name="dimen_bg_text_listid">12dp</dimen>
     <dimen name="dimen_separate_text_listid">5dp</dimen>
 
+    <!-- Tamaño de texto -->
+    <dimen name="dimen_text">16sp</dimen>
+
     <!-- Tamaños por default -->
     <dimen name="dimen_separate_default">8dp</dimen>
 </resources>
