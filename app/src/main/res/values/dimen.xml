@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Separaciones para los elementos de listID -->
     <dimen name="dimen_bg_text_listid">12dp</dimen>
-    <dimen name="dimen_separate_text_listid">4dp</dimen>
+    <dimen name="dimen_separate_text_listid">5dp</dimen>
+
+    <!-- Tamaños por default -->
+    <dimen name="dimen_separate_default">8dp</dimen>
 </resources>
