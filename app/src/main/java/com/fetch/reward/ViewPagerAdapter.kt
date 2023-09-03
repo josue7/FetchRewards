@@ -13,6 +13,9 @@ class ViewPagerAdapter(fragment: FragmentActivity, private val tabCount: Int) : 
             in 0..3 -> {
                 val bundle = Bundle()
                 val fragment = FragmentListID()
+                val list = mutableListOf<String>()
+
+                list.add("uyiiuy")
                 bundle.putString("text", "LisID${position+1}")
                 fragment.arguments = bundle
                 return fragment
