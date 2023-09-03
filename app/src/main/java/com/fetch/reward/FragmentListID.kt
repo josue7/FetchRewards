@@ -5,21 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.fetch.reward.adapter.AdapterListItemHiring
 import com.fetch.reward.databinding.FragmentListidBinding
 
 class FragmentListID : Fragment() {
     private lateinit var binding: FragmentListidBinding
+    private lateinit var listHiringAdapter: AdapterListItemHiring
+    private lateinit var itemHiring: List<String>
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         //val bundle = arguments
         //val value = bundle?.getString("text").toString()
 
         binding = FragmentListidBinding.inflate(inflater, container, false)
+
 
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_listid, container, false)
@@ -28,8 +32,20 @@ class FragmentListID : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initRecyclerView(listOf("dfdf","daad"), view)
 
         //binding.txFrag.text = arguments?.getString("text").toString()
         //Toast.makeText(view.context, , Toast.LENGTH_LONG).show()
+    }
+
+    private fun initRecyclerView(item: List<String>, view: View){
+        itemHiring = item
+
+        listHiringAdapter = AdapterListItemHiring(itemHiring)
+
+        binding.rvListItem.setHasFixedSize(true)
+        binding.rvListItem.layoutManager = LinearLayoutManager(view.context)
+        binding.rvListItem.adapter = listHiringAdapter
+
     }
 }
