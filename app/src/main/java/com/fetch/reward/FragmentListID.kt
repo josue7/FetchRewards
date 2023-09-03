@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fetch.reward.adapter.AdapterListItemHiring
 import com.fetch.reward.databinding.FragmentListidBinding
@@ -32,7 +33,7 @@ class FragmentListID : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initRecyclerView(listOf("dfdf","daad"), view)
+        initRecyclerView(listOf("dfdf","daad", "akjsdhakdj"), view)
 
         //binding.txFrag.text = arguments?.getString("text").toString()
         //Toast.makeText(view.context, , Toast.LENGTH_LONG).show()
@@ -44,7 +45,7 @@ class FragmentListID : Fragment() {
         listHiringAdapter = AdapterListItemHiring(itemHiring)
 
         binding.rvListItem.setHasFixedSize(true)
-        binding.rvListItem.layoutManager = LinearLayoutManager(view.context)
+        binding.rvListItem.layoutManager = GridLayoutManager(view.context, 2)
         binding.rvListItem.adapter = listHiringAdapter
 
     }
