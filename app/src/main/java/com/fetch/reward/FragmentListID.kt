@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.fetch.reward.adapter.AdapterListItemHiring
 import com.fetch.reward.databinding.FragmentListidBinding
 import com.fetch.reward.datos.DataHiringItem
@@ -37,12 +36,8 @@ class FragmentListID : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView(itemHiring, view)
 
-        binding.btnFilterNull.setOnClickListener {
-            Toast.makeText(view.context, "Filtro nulo", Toast.LENGTH_SHORT).show()
-        }
-
-        binding.btnFilterBlank.setOnClickListener {
-            Toast.makeText(view.context, "Filtro blanco", Toast.LENGTH_SHORT).show()
+        binding.btnFilterNullblanck.setOnClickListener {
+            initRecyclerView(filteredList(itemHiring), view)
         }
 
         //binding.txFrag.text = arguments?.getString("text").toString()
@@ -62,4 +57,6 @@ class FragmentListID : Fragment() {
     fun setListData(list: List<DataHiringItem>) {
         itemHiring = list
     }
+
+    fun filteredList(list: List<DataHiringItem>) = list.filterNotNull().filter { it.name.isNullOrEmpty() }
 }
