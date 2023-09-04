@@ -2,22 +2,35 @@ package com.fetch.reward
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.viewpager2.widget.ViewPager2
 import com.fetch.reward.databinding.ActivityMainBinding
+import com.fetch.reward.datos.DataHiringItem
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    public lateinit var viewPagerAdapter: ViewPagerAdapter
+    private lateinit var itemHiringItem: List<DataHiringItem>
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        itemHiringItem = addData()
         setTab()
+    }
+    private fun addData(): List<DataHiringItem>{
+        val list = mutableListOf<DataHiringItem>()
+        for (i in 1..13) {
+            val item = DataHiringItem(i, (1..4).random(), "Item $i")
+            list.add(item)
+        }
+        //list.shuffle()
+        Log.i("DATOS", list.toString())
+        return list
     }
 
     private fun setTab(){
-        val adapter = ViewPagerAdapter(this, binding.tabMenu.tabCount)
+        val adapter = ViewPagerAdapter(this, binding.tabMenu.tabCount, itemHiringItem)
         binding.vp2ListItem.adapter = adapter
         binding.vp2ListItem.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
