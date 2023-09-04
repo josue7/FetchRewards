@@ -9,7 +9,7 @@ class VHListItemHiring(view: View): RecyclerView.ViewHolder(view) {
     private val binding = ItemHiringBinding.bind(view)
 
     fun bind(item: DataHiringItem){
-        binding.tvListID.text = item.listId.toString()
+        binding.tvListID.text = item.listId .toString()
         binding.tvId.text = item.id.toString()
         binding.tvName.text = item.name
     }
