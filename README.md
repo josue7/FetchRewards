@@ -21,4 +21,4 @@
 - Framegment
 
 ## Imagen de la app
-<img src="https://i.imgur.com/9hcrsQq.png" height="380px" width="860px">
+<img src="https://i.imgur.com/9hcrsQq.png">
