@@ -3,10 +3,17 @@ package com.fetch.reward
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import com.fetch.reward.databinding.ActivityMainBinding
 import com.fetch.reward.datos.DataHiringItem
+import com.fetch.reward.datos.ServiceData
 import com.google.android.material.tabs.TabLayout
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -17,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         itemHiringItem = addData()
         setTab()
+        getElementsHiring()
     }
     private fun addData(): List<DataHiringItem>{
         val list = mutableListOf<DataHiringItem>()
@@ -25,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             list.add(item)
         }
         //list.shuffle()
-        Log.i("DATOS", list.toString())
+        //Log.i("DATOS", list.toString())
         return list
     }
 
@@ -47,5 +55,32 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTabReselected(tab: TabLayout.Tab?) { }
         })
+    }
+
+    private fun getRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl("https://fetch-hiring.s3.amazonaws.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    private fun getElementsHiring(){
+
+        val dataHirin = getRetrofit().create(ServiceData::class.java)
+        dataHirin.getData().enqueue(object: Callback<List<DataHiringItem>>{
+            override fun onResponse(
+                call: Call<List<DataHiringItem>>,
+                response: Response<List<DataHiringItem>>) {
+                Log.i("DATAW", response.body().toString())
+            }
+
+            override fun onFailure(call: Call<List<DataHiringItem>>, t: Throwable) {
+                showError()
+            }
+        })
+    }
+
+    private fun showError(){
+        Toast.makeText(this, "Ha ocurrido algun error", Toast.LENGTH_SHORT).show()
     }
 }
