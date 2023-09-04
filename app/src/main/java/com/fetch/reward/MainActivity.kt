@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        itemHiringItem = addData()
-        setTab()
         getElementsHiring()
+        //itemHiringItem = addData()
+
     }
     private fun addData(): List<DataHiringItem>{
         val list = mutableListOf<DataHiringItem>()
@@ -71,7 +71,15 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(
                 call: Call<List<DataHiringItem>>,
                 response: Response<List<DataHiringItem>>) {
-                Log.i("DATAW", response.body().toString())
+                if (response.isSuccessful){
+                    Log.i("DATAW", response.body().toString())
+                    val data: List<DataHiringItem>? = response.body()!!
+                    if (data != null) {
+                        itemHiringItem = data
+                        Log.i("ITEM", itemHiringItem.toString())
+                        setTab()
+                    }
+                }
             }
 
             override fun onFailure(call: Call<List<DataHiringItem>>, t: Throwable) {
