@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fetch.reward.adapter.AdapterListItemHiring
@@ -35,6 +36,14 @@ class FragmentListID : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView(itemHiring, view)
+
+        binding.btnFilterNull.setOnClickListener {
+            Toast.makeText(view.context, "Filtro nulo", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnFilterBlank.setOnClickListener {
+            Toast.makeText(view.context, "Filtro blanco", Toast.LENGTH_SHORT).show()
+        }
 
         //binding.txFrag.text = arguments?.getString("text").toString()
         //Toast.makeText(view.context, , Toast.LENGTH_LONG).show()
