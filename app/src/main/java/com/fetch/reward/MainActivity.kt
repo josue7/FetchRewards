@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         getElementsHiring()
-        //itemHiringItem = addData()
 
     }
     private fun addData(): List<DataHiringItem>{
@@ -32,8 +31,6 @@ class MainActivity : AppCompatActivity() {
             val item = DataHiringItem(i, (1..4).random(), "Item $i")
             list.add(item)
         }
-        //list.shuffle()
-        //Log.i("DATOS", list.toString())
         return list
     }
 
