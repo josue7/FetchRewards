@@ -1,6 +1,6 @@
 # FetchRewards
 <div align="center">
-  <h1 align="center">Creacion de la <strong>aplicación para Fetch Hiring</strong></h1>
+  <h1 align="center">Creacion de la <strong>aplicación para Fetch Rewards</strong></h1>
   <img src="https://i.imgur.com/QExRvHn.png" height="380px" width="860px">
 
 ![Linkedin URL](https://img.shields.io/twitter/url?color=%230A66C2&label=Josue%20Marfil&logo=linkedin&logoColor=%230A66C2&style=social&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fjosu%25C3%25A9-marfil-8645b318b%2F)
