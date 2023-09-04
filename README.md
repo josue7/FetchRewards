@@ -1,5 +1,4 @@
 # FetchRewards
- Creacion de aplicación para participar en una vacante en Fetch
 <div align="center">
   <h1 align="center">Creacion de la <strong>aplicación para Fetch Hiring</strong></h1>
   <img src="https://i.imgur.com/QExRvHn.png" height="380px" width="860px">
