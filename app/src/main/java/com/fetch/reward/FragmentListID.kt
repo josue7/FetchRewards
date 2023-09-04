@@ -36,9 +36,9 @@ class FragmentListID : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView(itemHiring, view)
 
-        binding.btnFilterNullblanck.setOnClickListener {
+        /*binding.btnFilterNullblanck.setOnClickListener {
             initRecyclerView(filteredList(itemHiring), view)
-        }
+        }*/
 
         //binding.txFrag.text = arguments?.getString("text").toString()
         //Toast.makeText(view.context, , Toast.LENGTH_LONG).show()
@@ -58,5 +58,5 @@ class FragmentListID : Fragment() {
         itemHiring = list
     }
 
-    fun filteredList(list: List<DataHiringItem>) = list.filterNotNull().filter { it.name.isNullOrEmpty() }
+    //fun filteredList(list: List<DataHiringItem>) = list.filterNotNull().filter { it.name.isNullOrEmpty() }
 }
