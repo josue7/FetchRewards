@@ -18,29 +18,25 @@ class ViewPagerAdapter(fragment: FragmentActivity, private val tabCount: Int, pr
             0 -> {
                 val fragment = FragmentListID()
                 val listFilter = filterByListId(orderHiring, 1)
-                Log.i("DATA FILTER1", listFilter.toString())
-                fragment.setListData(listFilter)
+                fragment.setListData(filteredList(listFilter))
                 return fragment
             }
             1 -> {
                 val fragment = FragmentListID()
                 val listFilter = filterByListId(orderHiring, 2)
-                Log.i("DATA FILTER2", listFilter.toString())
-                fragment.setListData(listFilter)
+                fragment.setListData(filteredList(listFilter))
                 return fragment
             }
             2 -> {
                 val fragment = FragmentListID()
                 val listFilter = filterByListId(orderHiring, 3)
-                Log.i("DATA FILTER2", listFilter.toString())
-                fragment.setListData(listFilter)
+                fragment.setListData(filteredList(listFilter))
                 return fragment
             }
             3-> {
                 val fragment = FragmentListID()
                 val listFilter = filterByListId(orderHiring, 4)
-                Log.i("DATA FILTER4", listFilter.toString())
-                fragment.setListData(listFilter)
+                fragment.setListData(filteredList(listFilter))
                 return fragment
             }
             else -> FragmentListID()
@@ -52,5 +48,9 @@ class ViewPagerAdapter(fragment: FragmentActivity, private val tabCount: Int, pr
 
     private fun filterByListId(dataHiring: List<DataHiringItem>, id: Int): List<DataHiringItem> =
         dataHiring.filter { it.listId == id }
+
+    fun filteredList(list: List<DataHiringItem>) =
+        list.filterNotNull().filter { it.name.isNullOrEmpty() }
+
 
 }
