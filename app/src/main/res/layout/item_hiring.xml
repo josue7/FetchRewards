@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/dimen_separate_default"
-    android:paddingBottom="@dimen/dimen_separate_default"
+    android:layout_marginTop="@dimen/dimen_separate_default"
+    android:layout_marginStart="4dp"
+    android:layout_marginBottom="@dimen/dimen_separate_default"
     app:cardCornerRadius="12dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -59,7 +60,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/text_id_list"
                 android:textColor="@color/secondary"
@@ -90,7 +91,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/text_name_list"
                 android:textColor="@color/secondary"
