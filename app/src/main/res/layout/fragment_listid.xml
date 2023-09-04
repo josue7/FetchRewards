@@ -17,24 +17,7 @@
             app:cardElevation="4dp"
             android:layout_marginTop="@dimen/dimen_text"
             android:layout_marginStart="@dimen/dimen_separate_default"
-            android:layout_marginEnd="@dimen/dimen_text"
-            >
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/tv_title_filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/text_title_filter"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/dimen_text"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-
+            android:layout_marginEnd="@dimen/dimen_text">
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -42,35 +25,26 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_title_filter"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
-
-                    <Button
-                        android:id="@+id/btn_filter_null"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/tv_title_filter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/text_filter_null"
-                        android:textColor="@android:color/white"
-                        android:backgroundTint="@color/secondary"
-                        android:layout_marginEnd="24dp"
-                        android:layout_marginBottom="4dp"/>
+                        android:text="@string/text_title_filter"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/dimen_text"
+                        android:textStyle="bold"/>
 
                     <Button
-                        android:id="@+id/btn_filter_blank"
+                        android:id="@+id/btn_filter_nullblanck"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/text_filter_blank"
+                        android:text="@string/text_filter"
                         android:textColor="@android:color/white"
                         android:backgroundTint="@color/secondary"
                         android:layout_marginBottom="4dp"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
         </androidx.cardview.widget.CardView>
 
