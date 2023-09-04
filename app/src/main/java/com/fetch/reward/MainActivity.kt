@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun addData(): List<DataHiringItem>{
         val list = mutableListOf<DataHiringItem>()
-        for (i in 1..13) {
+        for (i in 10..18) {
             val item = DataHiringItem(i, (1..4).random(), "Item $i")
             list.add(item)
         }
