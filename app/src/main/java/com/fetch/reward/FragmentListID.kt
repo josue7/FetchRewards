@@ -9,11 +9,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fetch.reward.adapter.AdapterListItemHiring
 import com.fetch.reward.databinding.FragmentListidBinding
+import com.fetch.reward.datos.DataHiringItem
 
 class FragmentListID : Fragment() {
     private lateinit var binding: FragmentListidBinding
     private lateinit var listHiringAdapter: AdapterListItemHiring
-    private lateinit var itemHiring: List<String>
+    private lateinit var itemHiring: List<DataHiringItem>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,13 +34,13 @@ class FragmentListID : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initRecyclerView(listOf("dfdf","daad", "akjsdhakdj"), view)
+        initRecyclerView(itemHiring, view)
 
         //binding.txFrag.text = arguments?.getString("text").toString()
         //Toast.makeText(view.context, , Toast.LENGTH_LONG).show()
     }
 
-    private fun initRecyclerView(item: List<String>, view: View){
+    private fun initRecyclerView(item: List<DataHiringItem>, view: View){
         itemHiring = item
 
         listHiringAdapter = AdapterListItemHiring(itemHiring)
@@ -47,6 +48,9 @@ class FragmentListID : Fragment() {
         binding.rvListItem.setHasFixedSize(true)
         binding.rvListItem.layoutManager = GridLayoutManager(view.context, 2)
         binding.rvListItem.adapter = listHiringAdapter
+    }
 
+    fun setListData(list: List<DataHiringItem>) {
+        itemHiring = list
     }
 }
