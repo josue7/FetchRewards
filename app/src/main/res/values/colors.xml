@@ -5,5 +5,7 @@
 
     <!-- app -->
     <color name="primary">#c724c2</color>
+    <color name="primaryDark">#9800ac</color>
     <color name="secondary">#ff9900</color>
+    <color name="secondaryDark">#ef6d00</color>
 </resources>
